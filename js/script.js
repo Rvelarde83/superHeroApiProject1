@@ -75,56 +75,5 @@ $button.on("click", () => {
 })
 
 
-// function segundCall(updatedUserSearch){
-
-// $ajax({
-//     url: `https://www.superheroapi.com/api.php/${token}/search/${updatedUserSearch}`,
-// }).then((data)=>{
-//     console.log (data.)
-// } )
-//   }
-
-
-// $.ajax({
-//     url: `https://www.superheroapi.com/api.php/${token}/search/${updatedUserSearch}`,
-// }).then((data) => {
-//     $div.append(`Search Results:`);
-//     // to see the data we get back
-//     for (i in data.results){
-//         let name="";
-//        const finalResult = data.results[i].name;
-//         console.log(finalResult + "hola cabrón");
-    //    sResults.push(newResult)
-    //    const $li = $("<li>")
-    //    $li.text(newResult)
-    //    $ul.append($li)
-//     }
-// })
-
-
-
-
-
-
-
-
-    // document.querySelector(".search-results").addEventListener("click",(event) => {
-    //     console.log(event.target)
-    // } )
-//     let heroId = data.results[0].id
-//     $.ajax({
-//         url: `https://www.superheroapi.com/api.php/${token}/${heroId}`,
-//     }).then((d) => {
-//         console.log(d)
-//     })
-// })
-
-
-/* FROM HERE YOU SHOULD BE ABLE TO CLICK ON THE NAME AND THEN EITHER DO A REQUEST FOR THE ID OR STRAIGHT OUT FETCH INFO FROM SAME REQUEST, by clicking in one of those names
-then it does another request that, by character ID, finds that character and displays
-names, alias, first appearance and the image (more?)
-
-if you click on the search field again it should clear the text field and when you click on the search button it should clear all the items
-so it doesn’t show more than one series of results*/
 
 
