@@ -8,10 +8,12 @@ const sResults = []
 let updatedUserSearch = "";
 const $input = $("input")
 const $button = $("button")
+let $span = $("span")
 
 
 // put a click event on the button
 $button.on("click", () => {
+
     // get the text the user types
     const searchTerm = $input.val()
     // make the api call
@@ -20,45 +22,56 @@ $button.on("click", () => {
     $.ajax({
         url: `https://www.superheroapi.com/api.php/${token}/search/${searchTerm}`,
     }).then((data) => {
+        if (data.response == "error") {
+            $span.append(data.error)
 
-        // to see the data we get back
-        for (i in data.results) {
-            let name = "";
-            const newResult = [data.results[i].name, data.results[i].id];
-
-
-            let nameChar = newResult[0]
-            let idChar = newResult[1]
+        } else {
 
 
-            const $li = $("<li>")
-            $li.text(nameChar)
-            $ul.append($li)
 
-            $li.on("click", (event) => {
-                console.log(event.target)
-                const newSearchItem = $(event.target)
-                console.log(newSearchItem.text() + " primero")
-                console.log(idChar)
+            // to see the data we get back
+            for (i in data.results) {
+                let name = "";
+                const newResult = [data.results[i].name, data.results[i].id];
 
 
-                $.ajax({
-                    url: `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/${token}/${idChar}`,
+                let nameChar = newResult[0]
+                let idChar = newResult[1]
 
-                }).then((data) => {
-                    console.log(data)
 
-                    const $img = $("<img id= image>");
-                    $img.attr("src", data.image.url);
-                    console.log(data.image.url)
-                    $img.appendTo("#image")
+                const $li = $("<li>")
+                $li.text(nameChar)
+                $ul.append($li)
+
+                $li.on("click", (event) => {
+                    console.log(event.target)
+                    const newSearchItem = $(event.target)
+                    console.log(newSearchItem.text() + " primero")
+                    console.log(idChar)
+
+
+                    $.ajax({
+                        url: `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/${token}/${idChar}`,
+
+                    }).then((data) => {
+                        console.log(data)
+
+                        const $img = $("<img id= image>");
+                        $img.attr("src", data.image.url);
+                        console.log(data.image.url)
+                        $img.appendTo("#image")
+                    })
+
+
                 })
 
-
-            })
-
+            }
         }
+    
     })
+    $input.val("");
+    $span.text("");
+    $(".search-results").empty();
 })
 
 

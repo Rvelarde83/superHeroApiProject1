@@ -86,7 +86,7 @@ $button.on("click", () => {
 
 
     $input.val("");
-    $("span").contents().filter(function () {
+    $("#master").contents().filter(function () {
         return this.nodeType === Node.TEXT_NODE;
     }).remove();
 
