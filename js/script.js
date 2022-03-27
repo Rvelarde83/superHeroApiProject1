@@ -18,7 +18,7 @@ $button.on("click", () => {
     const searchTerm = $input.val()
     // make the api call
 
-    // $div.prepend(`Search Results:`);
+    $div.prepend(`Click on the desired Search Results to see info:`);
     $.ajax({
         url: `https://www.superheroapi.com/api.php/${token}/search/${searchTerm}`,
     }).then((data) => {
