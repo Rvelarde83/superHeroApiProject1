@@ -13,3 +13,5 @@ const biography= {
   for (key in biography){
       console.log(key+ " : "+biography[key])
   }
+
+  // utility to check iterating over objects...
