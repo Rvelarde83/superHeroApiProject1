@@ -18,7 +18,7 @@ $button.on("click", () => {
     const searchTerm = $input.val()
     // make the api call
 
-    $div.prepend(`Click on the desired Search Results to see info:`);
+    // $div.prepend(`Click on the desired Search Results to see info:`); not
     $.ajax({
         url: `https://www.superheroapi.com/api.php/${token}/search/${searchTerm}`,
     }).then((data) => {
@@ -46,21 +46,26 @@ $button.on("click", () => {
                 $li.on("click", (event) => {
                     console.log(event.target)
                     const newSearchItem = $(event.target)
-                    console.log(newSearchItem.text() + " primero")
+                    console.log(newSearchItem.text() + " primero console log")
                     console.log(idChar)
+                    for (i in data.results) {
+                        if (data.results[i].id === idChar) {
+                            console.log(data.results[i].powerstats.durability) // to see if I'm getting the info from the correct character
+                        }
+                    }
 
 
-                    $.ajax({
-                        url: `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/${token}/${idChar}`,
+                    // $.ajax({
+                    //     url: `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/${token}/${idChar}`,
 
-                    }).then((data) => {
-                        console.log(data)
+                    // }).then((data) => {
+                    //     console.log(data)
 
-                        const $img = $("<img id= image>");
-                        $img.attr("src", data.image.url);
-                        console.log(data.image.url)
-                        $img.appendTo("#image")
-                    })
+                    //     const $img = $("<img id= image>");
+                    //     $img.attr("src", data.image.url);
+                    //     console.log(data.image.url)
+                    //     $img.appendTo("#image")
+                    // })
 
 
                 })
