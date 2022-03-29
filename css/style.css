@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Poiret+One&family=Rubik&family=Rubik+Mono+One&family=Source+Code+Pro:wght@200&family=VT323&display=swap');
+body{
+    background-image: url("background.jpeg") ;
+   
+    
+    
+
+} 
+h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    75% {
+      font-size: 300%;
+      margin-left: 25%;
+      width: 150%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+     @media screen and (min-width: 1366px) {
+    #gallery-1 img {width:375px;}
+    }
+    @media screen and (min-width: 1440px) {
+    #gallery-1 img {width:428px;}
+    }
+    @media screen and (min-width: 1600px) {
+    #gallery-1 img {width:434px;}
+    }
+    @media screen and (min-width: 1920px) {
+    #gallery-1 img {width:540px;}
+    }
+
+.search-results{
+    font-size: 20px;
+    /* font-family: 'Source Code Pro', monospace; */
+}
+input{
+    /* margin-left:180px; */
+}
+
+.master-div{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 120px;
+    justify-content: left;
+}
+
+#image{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+#infx{
+    display: flex;
+    justify-content: center;
+    margin-left:30px;
+
+}
+#info{ 
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    align-items:center;
+    flex-wrap: wrap;
+    /* justify-content:left; */
+    list-style-type: none;
+    color: white;
+}
+

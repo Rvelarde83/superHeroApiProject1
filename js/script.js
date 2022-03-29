@@ -61,33 +61,33 @@ $button.on("click", () => {
                             console.log(data.results[i].image.url)
                             $img.appendTo("#image")
                             const $bio = $("#info-character")
-                            const $h2 = $("<h2>")
-                            $h2.text(`Info of ${data.results[i].name}: `) // h2 to announce the info of the character
+                            const $h2 = $("<h2 id= infx>")
+                            $h2.text(`${data.results[i].name} Info: `) // h2 to announce the info of the character
                             $h2.appendTo("#image")
                             for (const key in data.results[i].biography) { // to iterate through elements of the object in the API to get the BIO
 
                                 const $li2 = $("<li>")
-                                $li2.text(`${key} : ${data.results[i].biography[key]}`)
+                                $li2.text(`${key.toUpperCase()} : ${data.results[i].biography[key]}`)
                                 $ulInfo.append($li2)
                                 console.log($li2.text())
                             }
                             for (const key in data.results[i].appearance) {// to iterate through elements of the object in the API to get the APPEARANCE info
 
                                 const $li3 = $("<li>")
-                                $li3.text(`${key} : ${data.results[i].appearance[key]}`)
+                                $li3.text(`${key.toUpperCase()} : ${data.results[i].appearance[key]}`)
                                 $ulInfo.append($li3)
                                 console.log($li3.text())
                             }
                             for (const key in data.results[i].work) {// to iterate through elements of the object in the API to get the WORK info
 
                                 const $li4 = $("<li>")
-                                $li4.text(`${key} : ${data.results[i].work[key]}`)
+                                $li4.text(`${key.toUpperCase()} : ${data.results[i].work[key]}`)
                                 $ulInfo.append($li4)
                             }
                             for (const key in data.results[i].connections) {// to iterate through elements of the object in the API to get the CONNECTIONS info
 
                                 const $li5 = $("<li>")
-                                $li5.text(`${key} : ${data.results[i].connections[key]}`)
+                                $li5.text(`${key.toUpperCase()} : ${data.results[i].connections[key]}`)
                                 $ulInfo.append($li5)
                                 console.log($li5.text())
                             }
