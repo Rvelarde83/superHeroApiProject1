@@ -28,3 +28,6 @@ No need for sequential $.ajax calls, the first call to the api, using the name o
 Thinking about adding a key hit, so after typing on the input box you just hit "enter" and you get the results anyway.
 Also adding the alt quality to the pictures////
 another thing would be to click on the picture and opening it on a separate window on its own**
+
+
+https://rvelarde83.github.io/superHeroApiProject1/

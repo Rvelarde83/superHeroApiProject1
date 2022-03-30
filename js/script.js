@@ -61,17 +61,21 @@ $button.on("click", () => {
                             $img.attr("src", data.results[i].image.url);// retrieves image to be displayed
                             console.log(data.results[i].image.url)
                             $img.appendTo("#image")
-                            $img.on("click", () => {
-                                window.open(data.results[i].image.url)
-
-                            })
+                    
                             const $bio = $("#info-character")
-                            const $h2 = $("<h2 id= infx>")
-                            const $h3 = $("<h3>")
+                            const $h2 = $("<h2 class= infx>")
+                            const $h3 = $("<h3 class= infx>")
                             $h3.text("click on the image to open on a different window")
                             $h2.text(`${data.results[i].name} Info: `) // h2 to announce the info of the character
                             $h2.appendTo("#image")
                             $h3.appendTo("#image")
+                            $img.on("click", (event) => {
+                                let url = $img.attr('src')
+                                
+                                
+                                window.open(url)
+
+                            })
                             for (const key in data.results[i].biography) { // to iterate through elements of the object in the API to get the BIO
 
                                 const $li2 = $("<li>")
