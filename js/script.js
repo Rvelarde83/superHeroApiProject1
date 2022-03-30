@@ -1,4 +1,4 @@
-// as soon as it is approved get the  repo on github and commit a lot!//
+
 console.log("js live Ramono-project")
 
 const token = "10166261980010720";
