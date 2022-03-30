@@ -43,7 +43,7 @@ $button.on("click", () => {
 
 
                 const $li = $("<li>")  // ul li to show search results
-                $li.text(nameChar) 
+                $li.text(nameChar)
                 $ul.append($li)
 
                 $li.on("click", (event) => {  // event to select from search results
@@ -57,13 +57,21 @@ $button.on("click", () => {
                         if (data.results[i].id === idChar) { // when ID matches
                             console.log(data.results[i].powerstats.durability) // to see if I'm getting the info from the correct character
                             const $img = $("<img id= image>");
+                            $img.attr("alt", data.results[i].name) // adds alt attribute to image
                             $img.attr("src", data.results[i].image.url);// retrieves image to be displayed
                             console.log(data.results[i].image.url)
                             $img.appendTo("#image")
+                            $img.on("click", () => {
+                                window.open(data.results[i].image.url)
+
+                            })
                             const $bio = $("#info-character")
                             const $h2 = $("<h2 id= infx>")
+                            const $h3 = $("<h3>")
+                            $h3.text("click on the image to open on a different window")
                             $h2.text(`${data.results[i].name} Info: `) // h2 to announce the info of the character
                             $h2.appendTo("#image")
+                            $h3.appendTo("#image")
                             for (const key in data.results[i].biography) { // to iterate through elements of the object in the API to get the BIO
 
                                 const $li2 = $("<li>")
@@ -100,7 +108,7 @@ $button.on("click", () => {
     $input.val("");  // cleans the input box
     $span.text("");  // cleans other unwanted text when clicking on button
     $(".search-results").empty(); // cleans search results
-    
+
 })
 
 
