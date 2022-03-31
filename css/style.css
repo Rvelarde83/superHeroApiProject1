@@ -66,6 +66,9 @@ input{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    /* cursor: pointer;  */
+    width: fit-content;
+    height: fit-content;
     
 }
 
@@ -76,6 +79,7 @@ input{
 
 }
 #info{ 
+   
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
@@ -85,6 +89,11 @@ input{
     /* justify-content:left; */
     list-style-type: none;
     color: white;
+ 
+}
+li{
+  cursor: pointer; 
+  width: fit-content;
 }
 
 .ui-autocomplete {
@@ -98,4 +107,13 @@ input{
  */
 * html .ui-autocomplete {
   height: 100px;
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: gray; /* Green */
+  color: rgb(0, 0, 0);
 }
