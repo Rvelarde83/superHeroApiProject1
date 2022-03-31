@@ -24,7 +24,7 @@ The app works with an input box, where you type the name of the character (autoc
 ---
 
 ## Images 
-- First look
+- First look:
 ![Screenshot](SuperheroZone-first-look.png)
 - Autocomplete in action
 ![Screenshot2](autocomplete.png)
