@@ -15,6 +15,13 @@ This app provides general information and an image about a vast number of charac
 - CSS
 - JQuery
 
+## Getting Started:
+
+https://rvelarde83.github.io/superHeroApiProject1/
+
+The app works with an input box, where you type the name of the character (autocomplete shows options) and after clicking on the Search Character button you receive either a list of possible results or an error message indicating that the character was not found (spelling, dashes or spaces could be a factor, although shows the name as you'll find it in the data base), when you click on any of the names of the search results list you'll see the image and the information appear, if you decide to click on the image it will open itself in a new tab, also you can keep clicking different names of the search results list until you find what you're looking for. If you start a new search the screen will reset itself so you get a fresh space to display new results.
+
+---
 
 ## Images 
 - First look
@@ -25,36 +32,20 @@ This app provides general information and an image about a vast number of charac
 ![Screenshot3](searchresults.png)
 - Info being displayed:
 ![Screenshot4](info-displayed.png)
-
-
-
-## Getting Started:
-
-https://rvelarde83.github.io/superHeroApiProject1/
-
-The app works with an input box, where you type the name of the character and after clicking on the Search Character button you receive either a list of possible results or an error message indicating that the character was not found (spelling, dashes or spaces could be a factor!), when you click on any of the names of the list you'll see the image and the information appear, if you decide to click on the image it will open itself in a new tab, also you can keep clicking different names of the search results list until you find what you're looking for. If you start a new search the screen will reset itself so you get a fresh space to display new results.
-
-
+---
 ## Future Enhancements
 
 - Improvements on styling and displaying of content in a more dynamic way.
 - Show results for related content to be displayed afterwards (for example, if one searches for Batman then Robin, Alfred, the Joker, may appear as related suggestions).
 
 
-
-
-
-
-
-
-
-
-
+---
 
 ## Developing the code
 
 The following sections shows the way the code was developed originally, first by imagining the user experience and then by going over some of the the steps needed to take, as the app evolved some issues were solved in different ways...
 
+---
 
 ### User Stories:
 
@@ -65,6 +56,7 @@ The following sections shows the way the code was developed originally, first by
 - Gets info on that specific character and an image.
 - Goes back to the search box, and when they search for another. item, by clicking on the search box it cleans the screen so you can get a fresh look and display the results of the new search.
 
+---
 
 ### Pseudo-code
 
