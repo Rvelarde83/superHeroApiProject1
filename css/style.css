@@ -47,10 +47,7 @@ h1{
 
 .search-results{
     font-size: 20px;
-    /* font-family: 'Source Code Pro', monospace; */
-}
-input{
-    /* margin-left:180px; */
+ 
 }
 
 .master-div{
@@ -102,9 +99,7 @@ li{
   /* prevent horizontal scrollbar */
   overflow-x: hidden;
 }
-/* IE 6 doesn't support max-height
- * we use height instead, but this forces the menu to always be this tall
- */
+
 * html .ui-autocomplete {
   height: 100px;
 }
@@ -114,6 +109,6 @@ button {
 }
 
 button:hover {
-  background-color: gray; /* Green */
+  background-color: gray; 
   color: rgb(0, 0, 0);
 }

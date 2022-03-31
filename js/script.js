@@ -1,5 +1,5 @@
 
-console.log("js live Ramono-project")
+// console.log("js live Ramono-project")
 
 const token = "10166261980010720";
 let $div = $("div");
@@ -114,7 +114,7 @@ $button.on("click", () => {
     $(".search-results").empty(); // cleans search results
 
 })
-
+// the next array contains all the names of the characters from the API, has been used for the autocomplete feature on the site.
 $(document).ready(function () {
     var availableTags = ["A-Bomb", "Abe Sapien", "Abin Sur", "Abomination", "Abraxas", "Absorbing Man", "Adam Monroe", "Adam Strange", "Agent 13", "Agent Bob", "Agent Zero", "Air-Walker", "Ajax", "Alan Scott", "Alex Mercer", "Alex Woolsly", "Alfred Pennyworth", "Alien", "Allan Quatermain", "Amazo", "Ammo", "Ando Masahashi", "Angel", "Angel", "Angel Dust", "Angel Salvadore", "Angela", "Animal Man", "Annihilus", "Ant-Man", "Ant-Man II", "Anti-Monitor", "Anti-Spawn", "Anti-Venom", "Apocalypse", "Aquababy", "Aqualad", "Aquaman", "Arachne", "Archangel", "Arclight", "Ardina", "Ares", "Ariel", "Armor", "Arsenal", "Astro Boy", "Atlas", "Atlas", "Atom", "Atom", "Atom Girl", "Atom II", "Atom III", "Atom IV", "Aurora",
 
@@ -796,7 +796,7 @@ $(document).ready(function () {
         "Zatanna",
         "Zoom",
     ]
-    $("#tags").autocomplete({
+    $("#tags").autocomplete({  // taken from jQuery.ui this widget executes the autocomplete feature, jquery.ui has been linked from html
         source: availableTags
     })
 
